@@ -21,7 +21,7 @@ const routes: Routes = [
     {path: 'burgers', component: BurgersComponent},
     
 
-
+{path:'', redirectTo: 'home', pathMatch:'full'}
     
 
 ];
