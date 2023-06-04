@@ -5,5 +5,20 @@
 }
 .dropdown{
     margin-right: 30px;
-    
+    flex-direction: row;
+}
+.btn-secondary{
+    margin-right: 10px;
+}
+.container{
+    align-items: center;
+    justify-content: center;
+   
+}
+.carousel-inner{
+    flex-direction: row;
+}
+.popularemanu{
+    align-items: center;
+    justify-content: center;
 }

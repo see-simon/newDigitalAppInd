@@ -12,6 +12,9 @@ import { ProfileComponent } from './profile/profile.component';
 import { TrackorderComponent } from './trackorder/trackorder.component';
 import { DrinksComponent } from './drinks/drinks.component';
 import { BurgersComponent } from './burgers/burgers.component';
+import { RegisterComponent } from './register/register.component';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +27,10 @@ import { BurgersComponent } from './burgers/burgers.component';
     ProfileComponent,
     TrackorderComponent,
     DrinksComponent,
-    BurgersComponent
+    BurgersComponent,
+    RegisterComponent,
+    NavBarComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

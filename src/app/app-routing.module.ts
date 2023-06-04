@@ -7,6 +7,7 @@ import { HistoryComponent } from './history/history.component';
 import { TrackorderComponent } from './trackorder/trackorder.component';
 import { DrinksComponent } from './drinks/drinks.component';
 import { BurgersComponent } from './burgers/burgers.component';
+import { RegisterComponent } from './register/register.component';
 
 const routes: Routes = [
 
@@ -19,8 +20,12 @@ const routes: Routes = [
 
   {path:'drinks', component: DrinksComponent},
     {path: 'burgers', component: BurgersComponent},
-    
 
+  {path:'register', component: RegisterComponent},
+  
+
+    
+//to make default home page
 {path:'', redirectTo: 'home', pathMatch:'full'}
     
 
