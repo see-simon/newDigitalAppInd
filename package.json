@@ -1,7 +1,6 @@
 {
   "name": "first-app",
-  "version": "0.0.0",
-  
+  "version": "1.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -40,7 +39,6 @@
   },
   "description": "RESTful API with Node.js, Express, and PostgreSQL",
   "main": "index.js",
-  
   "repository": {
     "type": "git",
     "url": "git+https://github.com/see-simon/digitalIndividualApp.git"

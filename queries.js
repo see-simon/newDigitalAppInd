@@ -1,4 +1,4 @@
-const Pool = require('pg').Pool
+import { Pool } from 'pg'
 const pool = new Pool({
   user: 'postgres',
   host: 'localhost',
@@ -20,7 +20,7 @@ const getUsers = (request, response) => {
   const getUserById = (request, response) => {
     const id = parseInt(request.params.id)
   
-    pool.query('SELECT * FROM users WHERE id = $1', [id], (error, results) => {
+    pool.query('SELECT * FROM registration WHERE id = $1', [id], (error, results) => {
       if (error) {
         throw error
       }
@@ -29,9 +29,9 @@ const getUsers = (request, response) => {
   }
 
   const createUser = (request, response) => {
-    const { name, email } = request.body
+    const { fiestname, lastname, email, password } = request.body
   
-    pool.query('INSERT INTO users (name, email) VALUES ($1, $2) RETURNING *', [name, email], (error, results) => {
+    pool.query('INSERT INTO registration (fiestname,lastname, email, password) VALUES (mpelemane, thobejane, sea6580@gmail.com, 12345) RETURNING *', [fiestname, lastname, email, password], (error, results) => {
       if (error) {
         throw error
       }
@@ -41,11 +41,11 @@ const getUsers = (request, response) => {
 
   const updateUser = (request, response) => {
     const id = parseInt(request.params.id)
-    const { name, email } = request.body
+    const { fiestname, lastname, email, password } = request.body
   
     pool.query(
-      'UPDATE users SET name = $1, email = $2 WHERE id = $3',
-      [name, email, id],
+      'UPDATE registration SET fiestname = $1, email = $2 WHERE id = $3',
+      [fiestname, lastname, email, password, id],
       (error, results) => {
         if (error) {
           throw error
@@ -58,7 +58,7 @@ const getUsers = (request, response) => {
   const deleteUser = (request, response) => {
     const id = parseInt(request.params.id)
   
-    pool.query('DELETE FROM users WHERE id = $1', [id], (error, results) => {
+    pool.query('DELETE FROM registration WHERE id = $1', [id], (error, results) => {
       if (error) {
         throw error
       }
@@ -66,7 +66,7 @@ const getUsers = (request, response) => {
     })
   }
 
-  module.exports = {
+  export default {
     getUsers,
     getUserById,
     createUser,
